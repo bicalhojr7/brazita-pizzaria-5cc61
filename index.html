@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Brazita Pizzaria | L'arte della vera pizza</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&amp;family=Plus+Jakarta+Sans:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed": "#301400",
+                    "secondary": "#ffb783",
+                    "on-primary-fixed": "#410000",
+                    "background": "#200f01",
+                    "primary-fixed-dim": "#ffb4a9",
+                    "tertiary": "#e9c349",
+                    "primary-fixed": "#ffdad5",
+                    "on-secondary-container": "#451f00",
+                    "surface-tint": "#ffb4a9",
+                    "surface-container-highest": "#46301c",
+                    "on-secondary": "#4f2500",
+                    "outline": "#a88a85",
+                    "error-container": "#93000a",
+                    "on-tertiary": "#3c2f00",
+                    "on-secondary-fixed-variant": "#713700",
+                    "on-primary-fixed-variant": "#8e130c",
+                    "on-tertiary-fixed-variant": "#574500",
+                    "surface": "#200f01",
+                    "surface-container-low": "#2a1705",
+                    "inverse-on-surface": "#412c18",
+                    "surface-container-lowest": "#1a0a00",
+                    "tertiary-fixed-dim": "#e9c349",
+                    "on-error-container": "#ffdad6",
+                    "outline-variant": "#59413d",
+                    "on-surface-variant": "#e1bfb9",
+                    "primary-container": "#c0392b",
+                    "primary": "#ffb4a9",
+                    "surface-variant": "#46301c",
+                    "tertiary-container": "#cca72f",
+                    "tertiary-fixed": "#ffe088",
+                    "on-tertiary-fixed": "#241a00",
+                    "surface-bright": "#4b3420",
+                    "on-surface": "#ffdcc0",
+                    "secondary-fixed": "#ffdcc5",
+                    "secondary-container": "#db7619",
+                    "on-primary-container": "#ffe5e1",
+                    "secondary-fixed-dim": "#ffb783",
+                    "inverse-primary": "#b02d21",
+                    "on-tertiary-container": "#4e3d00",
+                    "surface-dim": "#200f01",
+                    "error": "#ffb4ab",
+                    "on-background": "#ffdcc0",
+                    "surface-container-high": "#3a2512",
+                    "inverse-surface": "#ffdcc0",
+                    "on-error": "#690005",
+                    "on-primary": "#690001",
+                    "surface-container": "#2f1b08"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-padding-desktop": "120px",
+                    "section-padding-mobile": "64px",
+                    "gutter": "24px",
+                    "container-max": "1200px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "label-caps": ["Plus Jakarta Sans"],
+                    "headline-md": ["Playfair Display"],
+                    "headline-sm": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"],
+                    "display-lg-mobile": ["Playfair Display"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "headline-md": ["40px", {"lineHeight": "48px", "fontWeight": "600"}],
+                    "headline-sm": ["28px", {"lineHeight": "36px", "fontWeight": "500"}],
+                    "display-lg": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "display-lg-mobile": ["48px", {"lineHeight": "52px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #200f01;
+            color: #ffdcc0;
+            overflow-x: hidden;
+        }
+        .editorial-line {
+            height: 1px;
+            background-color: rgba(255, 248, 240, 0.1);
+            width: 100%;
+        }
+        .image-reveal {
+            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .image-reveal:hover {
+            transform: scale(1.02);
+        }
+        .menu-item:hover .item-line {
+            background-color: #c0392b;
+        }
+    </style>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Brazita Pizzaria",
+      "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591",
+      "telephone": "+55-21-96430-1000",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua da Pizza Artesanal",
+        "addressLocality": "Rio de Janeiro",
+        "addressRegion": "RJ",
+        "postalCode": "20000-000",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -22.9068,
+        "longitude": -43.1729
+      },
+      "url": "https://brazita.com.br",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "18:00",
+        "closes": "23:30"
+      }
+    }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-background/95 border-b border-primary/20 backdrop-blur-md flex justify-between items-center px-gutter py-4">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer">menu</span>
+<span class="font-headline-md text-headline-md tracking-tighter text-primary">BRAZITA</span>
+</div>
+<nav class="hidden md:flex gap-8">
+<a class="font-label-caps text-label-caps text-primary border-b border-primary py-1" href="#">MENU</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300 py-1" href="#">RESERVA</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300 py-1" href="#">HISTÓRIA</a>
+</nav>
+<a class="px-6 py-3 border border-primary-container text-primary font-label-caps text-label-caps hover:bg-primary-container hover:text-background transition-all duration-500 ease-in-out" href="https://wa.me/5521964301000">
+            PEDIR AGORA
+        </a>
+</header>
+<main class="pt-24">
+<!-- Section 1: Hero -->
+<section class="min-h-screen px-gutter flex flex-col md:flex-row items-center justify-center gap-12 max-w-7xl mx-auto py-section-padding-mobile md:py-section-padding-desktop">
+<div class="w-full md:w-5/12 space-y-8 z-10">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg italic leading-tight">
+                    Sabor que transforma cada refeição numa <span class="text-primary-container not-italic font-bold block mt-2">experiência.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">
+                    Da nossa fermentação natural de 48h ao calor intenso do forno a lenha, resgatamos a alma da verdadeira pizza artesanal.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<a class="min-h-[44px] px-8 py-4 bg-primary-container text-background font-label-caps text-label-caps flex items-center justify-center gap-2 transition-all hover:brightness-110" href="https://wa.me/5521964301000">
+                        WHATSAPP: (21) 96430-1000
+                    </a>
+</div>
+</div>
+<div class="w-full md:w-7/12 relative group overflow-hidden">
+<div class="aspect-[4/5] md:aspect-square overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover image-reveal" data-alt="A macro photography shot of an artisanal Neapolitan pizza with leopard-spotted crust, fresh buffalo mozzarella melting over vibrant red tomato sauce, and emerald green basil leaves. The lighting is moody and warm, highlighting the textures of the dough and the glistening oils. Cinematic editorial style with deep shadows and rich, warm tones of burnt orange and deep red." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoB7w7T_5HUXDuydRkUfjzdu2rvoxm5Ljr6plc10QHDpp3sstrzGLQhGDhhxb-vKtlPZN5eHArdgM7j_nibshdGbnX_z38C-Pd-_gVXY7YHsBbaTKkk5WboAMBMw5zjSbho-q4YBkl7sT9czMMFH5TfyyIo9tXPjkABLvUQKKjPgqXZnEwM7IvMsQMocKU6UL8BQt7lcD35xOOFfACySuU-yCbu92Y58IzmX_zkEiRinjzxT8rpq72VOfJLiATSaxAwb4kkOPy1T2r"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-primary-container p-8 hidden md:block">
+<span class="font-headline-sm text-headline-sm text-background italic">Fatto a Mano</span>
+</div>
+</div>
+</section>
+<div class="px-gutter max-w-7xl mx-auto">
+<div class="editorial-line"></div>
+</div>
+<!-- Section 2: O Processo -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop px-gutter max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-end">
+<div class="md:col-span-7">
+<div class="aspect-video overflow-hidden mb-12">
+<img class="w-full h-full object-cover image-reveal" data-alt="A close-up action shot of a pizzaiolo's hands dusted with white flour, stretching a soft, elastic pizza dough on a dark marble countertop. Fine particles of flour are suspended in the air, illuminated by a sharp beam of side lighting. The background is a dark, rustic Italian kitchen with subtle copper accents. High-contrast, premium artisanal food photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiMvOVpjoAB0edsmt3zB3v3uldHGv4yfEqcwdKkDYQztiVUzLAg89gBI47Ez7cFGP0em3MqKVWkqo_VHG1uKmSyl-Vdaxf9z-yhwTkIqsO368VFKdVucY5TPSGoMsK47d93r2x6Wv1xqDWePTu0TnuQdsbT1vfrudiq_wVC5lP8Hl1LIlEA_ZDzcWCXqu6EVX5i4ORq-UGOVNfjpQrgZBhJnq5eLXReZ7dwFdlhKus_WNYCxTc6YsbLrOvjW4t19gou4pQa2WjYxav"/>
+</div>
+</div>
+<div class="md:col-span-5 pb-12 space-y-6">
+<h2 class="font-label-caps text-label-caps text-primary uppercase tracking-[0.2em]">O Processo Curado</h2>
+<h3 class="font-headline-md text-headline-md leading-tight">Massa de fermentação lenta, ingredientes que contam histórias.</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Nossa massa repousa por no mínimo 48 horas, permitindo que a ciência e o tempo criem uma textura aerada, leve e de digestão impecável. Utilizamos apenas farinha tipo 00 e tomates San Marzano genuínos.
+                </p>
+<div class="editorial-line !bg-primary/40 w-24"></div>
+</div>
+</section>
+<!-- Section 3: Menu Destaque -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop bg-surface-container-lowest">
+<div class="max-w-4xl mx-auto px-gutter">
+<div class="text-center mb-16">
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg italic">Il Nostro Menu</h2>
+<p class="font-label-caps text-label-caps text-secondary mt-4">SELEÇÃO DA CASA</p>
+</div>
+<div class="space-y-12">
+<!-- Menu Item -->
+<div class="menu-item group cursor-pointer">
+<div class="flex justify-between items-end mb-2">
+<h4 class="font-headline-sm text-headline-sm">Margherita Verace</h4>
+<span class="font-headline-sm text-headline-sm text-primary">64</span>
+</div>
+<div class="item-line h-[1px] w-full bg-outline-variant/30 transition-all duration-500"></div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-3 italic">Pomodoro San Marzano DOP, Mozzarella di Bufala, Manjericão fresco e Azeite Extra Virgem.</p>
+</div>
+<!-- Menu Item -->
+<div class="menu-item group cursor-pointer">
+<div class="flex justify-between items-end mb-2">
+<h4 class="font-headline-sm text-headline-sm">Diavola Moderna</h4>
+<span class="font-headline-sm text-headline-sm text-primary">72</span>
+</div>
+<div class="item-line h-[1px] w-full bg-outline-variant/30 transition-all duration-500"></div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-3 italic">Salame picante artesanal, Fior di Latte, Red Onion Caramelized e N'duja calabrese.</p>
+</div>
+<!-- Menu Item -->
+<div class="menu-item group cursor-pointer">
+<div class="flex justify-between items-end mb-2">
+<h4 class="font-headline-sm text-headline-sm">Tartufo e Funghi</h4>
+<span class="font-headline-sm text-headline-sm text-primary">88</span>
+</div>
+<div class="item-line h-[1px] w-full bg-outline-variant/30 transition-all duration-500"></div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-3 italic">Mix de cogumelos silvestres, creme de trufas brancas, pecorino romano e salsa fresca.</p>
+</div>
+<!-- Menu Item -->
+<div class="menu-item group cursor-pointer">
+<div class="flex justify-between items-end mb-2">
+<h4 class="font-headline-sm text-headline-sm">Brazita Signature</h4>
+<span class="font-headline-sm text-headline-sm text-primary">78</span>
+</div>
+<div class="item-line h-[1px] w-full bg-outline-variant/30 transition-all duration-500"></div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-3 italic">Pesto de pistache, mortadella bologna, stracciatella e raspas de limão siciliano.</p>
+</div>
+</div>
+<div class="mt-16 text-center">
+<a class="px-12 py-5 border border-on-surface text-on-surface font-label-caps text-label-caps hover:bg-on-surface hover:text-background transition-all duration-300" href="#">
+                        VER CARDÁPIO COMPLETO
+                    </a>
+</div>
+</div>
+</section>
+<!-- Section 4: Galeria Sensorial -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop px-gutter overflow-hidden">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+<div class="space-y-4 md:space-y-8 mt-12">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover image-reveal" data-alt="A top-down aesthetic shot of fresh, plump San Marzano tomatoes resting on a dark wooden surface with drops of water on their skin. Beside them, a rustic ceramic bowl contains coarse sea salt and peppercorns. Moody, editorial lighting with a focus on organic textures and deep crimson colors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4mtturVz2BCE18qvELYRYsjBJd9GNMPnqPBPYQ9h8kzyj91vm2jHs-KzrwmjkyNyaRtGzRX7yHx45C7O7Th5oT-NeYQkzDzg4YQaya9b8cbmhuhTqygNutSoMDj6CA6mJeKz7HwHzMLwcMuC2CZqFQsx1ClvxeYxGjgyZJtNt3i-YuLq1iJAIjlteqjpfIXkUYLYu52lUd9WEOfC2LeqSj75U1ShMrwzqtOIiNO5-QA-K11OJLe-YzR16FC2nIP_o7ARG4UGNXB5t"/>
+</div>
+<div class="aspect-square overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover image-reveal" data-alt="A warm, dimly lit interior of a high-end pizzeria. In the background, a large domed pizza oven glows with an orange fire. In the foreground, a dark wooden table is set with crystal wine glasses and a single white candle. Sophisticated, intimate atmosphere with deep shadows and golden highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQDvrwdx_oYO7WUUHhZ6wxi7Iv1PsGNQGWYJCyoR2ipc0q041G1Q4o-F3Imt-CtnzqN9Ff3b6omtTMWx0j0fAFvYkMd0mGhjKvJSEdaUsvOdk0SRSmQ6NhQ7KX4udF77HsY_jDgSELtJuu7eaqKY22FdlYIlOYDlQ3JkzEuVwusDJxx3f0DZOWjUpbtEbNOaqqO-XWnL9NDbBwsEFsDh_NTF0zKfxdylq6SnpYeJXlUr5aswXb2QU1xWzMoYAYZ6dOLw300KgtNsK2"/>
+</div>
+</div>
+<div class="space-y-4 md:space-y-8">
+<div class="aspect-square overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover image-reveal" data-alt="A vibrant, fresh branch of green basil leaves against a stark dark background. The leaves are crisp and detailed, showing every vein. Lighting is focused and dramatic, making the green pop against the dark brown of the design palette. Minimalist and editorial." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB26SQ08sCTrSHrEcwRVzh40pNpDt7TmbBSUCnHdCU8BeotGf4DGVJRmzVspv0WQ8Y4RyVtCMSVfKpF8Zz1RwoGTVXzEMy32_eJ0kUO9JjciCEwX1KjgiXBbxJ3EtGJsuuklD28R8sdDWe4UIIX7yUFx9e6YXqkFyMhWMv5lyPlawYYwr-GRX_L5Q4FARFXgIyPAuI8E_9GLsWlAVLIkhnHkh6aS9vuwvg5jlYOm2t6jb5ZRP34SD_bsF_XNrV86QyFz-gBPagIdAhT"/>
+</div>
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover image-reveal" data-alt="A slow-motion style shot of high-quality golden olive oil being poured from a thin-necked glass bottle into a small ceramic dish. The liquid is luminous and creates small ripples. The lighting is soft and golden, emphasizing the viscosity and premium quality of the oil." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmeXH2ICixZ0BK45nGjuXrXwbv6moS4UlPKZK2Of8MF_dDhGLOpUiMZEV--8UIlh99uTvoYmgPruznM1r0R4rceQnxEG_q4T06_XJda0NK_EEEMlc-U9o5qf6Lavx_9n3GgAbCnkx6TvXOsNs_cVu8krlTCuh2UadsXBGXf-X_lG3rFX_4mGMd2nWloKiWo8zTgENsf-Lpz7E9ZFktBw0zVw46qfDP-PgFb4RBHtHYgd_7WnlKVbjYyMyQ_zSvQ_NW2u3FiFZ4T4Yw"/>
+</div>
+</div>
+<div class="space-y-4 md:space-y-8 mt-12">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover image-reveal" data-alt="Close-up of a ball of fresh buffalo mozzarella cheese being torn apart by hand, revealing its creamy, milky interior. The texture is soft and inviting. Set against a dark, moody background with subtle steam or mist for a sensory effect." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDECss_c4ZXmOzAHJA_afnAqo4Ae0xbLa7ELwjjoIipFcyZVtKBGhLYPKS00jdbULCx86HfggX_TdhYpq8h6VYTjgi9jT2GTGTqA-gpQ0IVtNjRxsKuJoOVMGDqpQjmNT0jPNNZICkkjk6ZbM7tkbwoCNCyBEZp614PEXTWTpInP3BL0xQmYVKs0obk82bAJ0rdX-G9xBTCHeye7zQtvt0dkHRuOiQBPEE2uyfOw1IfHOxImxiHj9kVsvRvH2lf-NVa11wOLM_1IjPf"/>
+</div>
+<div class="aspect-square overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover image-reveal" data-alt="A glass of deep red Italian wine sitting on a textured slate surface. Reflection of the warm restaurant lights can be seen on the glass. The color is a rich ruby red, complementing the primary brand color. Elegant and moody food photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOHLhMko9W6HBt9recUb9aHQLlA3F2kbc0oI28zp47JTEQ5L207E54G4Q2KK3cQSLZJPGSCSX-Igq-1pg0n-PzyA70xJtKzlf4seqxi6LNZ1CT8ZBH_122qQBB2ChwhwBDle6usKzQKuUlhlANXScharZF0YKcmmltiPX0qZGccZVHPUyjcu2lOwQrsjCWvxAyButoIkaQU0I_Zqe1UnygcLPpwUWOmUTEhAEJjupvIYaijOU3cUaHTyi2jtWpcnjEbcmqEL7UhEQF"/>
+</div>
+</div>
+<div class="space-y-4 md:space-y-8">
+<div class="aspect-square overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover image-reveal" data-alt="A macro shot of a charred pizza crust edge, showing the 'leopard spots' characteristic of high-heat wood-fired baking. The texture is crunchy yet airy. Dark background with a few stray crumbs for authenticity. Artistic and tactile." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpjAP2P_BydrllNBkBvipFSrmYcXTwEAGe9hM_EUmTjdC1iyZhxN27bz4qksxg0Idi1QM7U9AHCWT13g4idZy1w1eM8j5kDTZr6QC2T2JSVJFuutJV9MmEektmmsyt8McOtTWT1q3C2LQNYsnV4Jn8D_fS27z0sY9OQ5PuNSs81HLChCR-qgOKdr7_39VkwmoVlZ2vg4Zi8y2z4_5k31RRZGau3owvEjqfC1UEu1ClUQy1WJLesXNhFwaGLTfNtb20yH7pKLAf4M5g"/>
+</div>
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover image-reveal" data-alt="A rustic wooden board holding a collection of aged Italian cheeses and cured meats. Thin slices of prosciutto and chunks of parmesan cheese. The scene is illuminated by soft, low-key lighting, creating a rich and savory visual narrative." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnA2bUXZB7LMxqTHL4fZhSEbWMeZbpHLn_8IMb4zNoLHsKLs58EsBmn0odPuMNUBG7XOmHH0VGQ9WdnBfN-w6pbnm8zdG-Bh_QCpfmrK0iJwX_qHDwPfuiYyBkBsg4Vz3K1CjEwjQUWCp51jUv5wpxGH51prVxmvfll-s2KV3SWO5W70U9IcAlTlS8H3KMG9JYfBw5XmB_dr2m8uZ4eVzF8vJbI5JmBvQBvkMYB-GHaF_xwDHMNLOkFAYu4omng49y-lMUmKiiFiWB"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: FAQ -->
+<section class="py-section-padding-mobile md:py-section-padding-desktop px-gutter max-w-4xl mx-auto">
+<h2 class="font-headline-md text-headline-md text-center mb-16 italic">Dúvidas Frequentes</h2>
+<div class="divide-y divide-outline-variant/20">
+<details class="group py-6">
+<summary class="flex justify-between items-center cursor-pointer list-none">
+<h3 class="font-body-lg text-body-lg font-bold">Qual o tempo médio de entrega?</h3>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="mt-4 text-on-surface-variant font-body-md">Prezamos pela qualidade. Nosso tempo médio é de 40 a 55 minutos, garantindo que sua pizza chegue na temperatura ideal e com a textura preservada.</p>
+</details>
+<details class="group py-6">
+<summary class="flex justify-between items-center cursor-pointer list-none">
+<h3 class="font-body-lg text-body-lg font-bold">Vocês trabalham com eventos privados?</h3>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="mt-4 text-on-surface-variant font-body-md">Sim. Oferecemos uma experiência exclusiva para eventos de pequeno e médio porte. Entre em contato pelo WhatsApp para um orçamento personalizado.</p>
+</details>
+<details class="group py-6">
+<summary class="flex justify-between items-center cursor-pointer list-none">
+<h3 class="font-body-lg text-body-lg font-bold">Quais são as formas de pagamento?</h3>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="mt-4 text-on-surface-variant font-body-md">Aceitamos todos os cartões de crédito, débito, Pix e pagamentos via aplicativos de entrega parceiros.</p>
+</details>
+<details class="group py-6">
+<summary class="flex justify-between items-center cursor-pointer list-none">
+<h3 class="font-body-lg text-body-lg font-bold">Possuem opções veganas ou sem glúten?</h3>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="mt-4 text-on-surface-variant font-body-md">Temos opções vegetarianas e veganas (queijo à base de plantas). No momento, não trabalhamos com massa sem glúten devido ao risco de contaminação cruzada no forno a lenha.</p>
+</details>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full relative border-t border-outline-variant/30 bg-surface-container-lowest py-section-padding-mobile md:py-section-padding-desktop px-gutter text-center space-y-12">
+<div class="max-w-4xl mx-auto space-y-8">
+<h2 class="font-headline-md text-headline-md text-primary tracking-tighter">BRAZITA</h2>
+<div class="flex flex-wrap justify-center gap-8 font-label-caps text-label-caps text-on-surface-variant">
+<a class="hover:text-secondary transition-colors" href="#">MENU</a>
+<a class="hover:text-secondary transition-colors" href="#">NOSSA HISTÓRIA</a>
+<a class="hover:text-secondary transition-colors" href="#">PRIVACIDADE</a>
+<a class="hover:text-secondary transition-colors" href="#">CONTATO</a>
+</div>
+<div class="editorial-line !bg-primary/20 max-w-xs mx-auto"></div>
+<div class="space-y-2">
+<p class="font-body-md text-body-md text-on-surface-variant">Rua da Pizza Artesanal, 123 — Rio de Janeiro, RJ</p>
+<p class="font-body-md text-body-md text-primary font-bold">(21) 96430-1000</p>
+</div>
+<p class="font-label-caps text-label-caps text-on-surface-variant/50 pt-8">
+                © 2024 Brazita Pizzaria. L'arte della vera pizza.
+            </p>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-4 pt-2 backdrop-blur-lg bg-surface-container-highest/90 border-t border-primary/10 z-50">
+<div class="flex flex-col items-center justify-center text-secondary border-t-2 border-secondary pt-2">
+<span class="material-symbols-outlined">restaurant_menu</span>
+<span class="font-label-caps text-[10px] mt-1">Menu</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant/70 pt-2">
+<span class="material-symbols-outlined">event</span>
+<span class="font-label-caps text-[10px] mt-1">Reserva</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant/70 pt-2">
+<span class="material-symbols-outlined">auto_stories</span>
+<span class="font-label-caps text-[10px] mt-1">História</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant/70 pt-2">
+<span class="material-symbols-outlined">chat</span>
+<span class="font-label-caps text-[10px] mt-1">WhatsApp</span>
+</div>
+</nav>
+<script>
+        // Micro-interactions for smooth scrolling or hover effects
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple Intersection Observer for scroll reveals
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0', 'translate-y-4');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-4');
+            observer.observe(section);
+        });
+    </script>
+</body></html>
